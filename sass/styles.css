@@ -1,32 +1,4 @@
 @charset "UTF-8";
-@-webkit-keyframes teste {
-  0% {
-    background-color: #c36291;
-  }
-  25% {
-    background-color: #bb3073;
-  }
-  50% {
-    background-color: #c22f76;
-  }
-  100% {
-    background-color: #c36291;
-  }
-}
-@keyframes teste {
-  0% {
-    background-color: #c36291;
-  }
-  25% {
-    background-color: #bb3073;
-  }
-  50% {
-    background-color: #c22f76;
-  }
-  100% {
-    background-color: #c36291;
-  }
-}
 * {
   padding: 0;
   margin: 0;
@@ -124,11 +96,12 @@ a:hover::after {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  position: relative;
 }
 #tituloeRedes img {
   border-radius: 50%;
-  width: 21vw;
-  height: 41vh;
+  width: 20vw;
+  border: 6px solid #F1B8D2;
 }
 @media (max-width: 460px) {
   #tituloeRedes img {
@@ -538,4 +511,34 @@ footer #msgRodape a::after {
 [data-anima].animacao {
   opacity: 1;
   transform: translate3d(0, 0, 0);
+}
+
+@-webkit-keyframes teste {
+  0% {
+    background-color: #c36291;
+  }
+  25% {
+    background-color: #bb3073;
+  }
+  50% {
+    background-color: #c22f76;
+  }
+  100% {
+    background-color: #c36291;
+  }
+}
+
+@keyframes teste {
+  0% {
+    background-color: #c36291;
+  }
+  25% {
+    background-color: #bb3073;
+  }
+  50% {
+    background-color: #c22f76;
+  }
+  100% {
+    background-color: #c36291;
+  }
 }/*# sourceMappingURL=styles.css.map */

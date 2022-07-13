@@ -1,15 +1,4 @@
 @use 'mixins'
-@keyframes teste
-  0%
-    background-color: #c36291
-  25%
-    background-color: #bb3073
-    
-  50%
-    background-color: #c22f76
-
-  100%
-    background-color: #c36291
 
 *
   padding: 0
@@ -77,11 +66,13 @@ a
   display: flex
   justify-content: space-around
   align-items: center
-
+  position: relative
+ 
   img
     border-radius: 50%
-    width: 21vw
-    height: 41vh
+    width: 20vw
+    border: 6px solid #F1B8D2
+
     @include mixins.mobile
       width: 31vw
       height: 31vh
@@ -339,6 +330,7 @@ footer
 
     a
       font-size: 5vw
+      
 
       &:hover
         transform: rotate(360deg)
@@ -393,3 +385,15 @@ footer
 [data-anima].animacao
   opacity: 1
   transform: translate3d(0, 0, 0)
+
+@keyframes teste
+  0%
+    background-color: #c36291
+  25%
+    background-color: #bb3073
+
+  50%
+    background-color: #c22f76
+
+  100%
+    background-color: #c36291
