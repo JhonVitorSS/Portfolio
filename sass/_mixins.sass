@@ -1,0 +1,39 @@
+
+@mixin linha-horizontal
+  text-decoration: none
+  color: #F1B8D2
+  font-size: 21px
+  position: relative
+  transition: ease-in-out 600ms
+  &:hover
+    color: #c70c63
+    font-size: 25px
+
+@mixin linha-horizontal-hover
+  &::after
+    content: ""
+    position: absolute
+    width: 0%
+    height: 5px
+    top: 25px
+    right: 0px
+    background-color: #c70c63
+    transition: ease-in-out 300ms
+  &:hover::after
+    width: 100%
+
+@mixin bg-img($img)
+  background-image: url('../imagens/#{$img}')
+  background-size: 40vw
+  background-position: center
+  background-repeat: no-repeat
+  filter: grayscale(100%)
+  transition: .6s
+
+  &:hover
+    background-size: 101%
+    filter: grayscale(0%)
+
+@mixin mobile
+  @media(max-width: 460px)
+    @content

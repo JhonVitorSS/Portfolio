@@ -1,0 +1,338 @@
+@use 'mixins'
+
+*
+  padding: 0
+  margin: 0
+  box-sizing: border-box
+html
+  scroll-behavior: smooth
+  scroll-padding-top: 155px
+
+body
+  background: linear-gradient(252.34deg, #F1B8D2 -4.03%, #95BBE9 112.41%)
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif
+
+  h2
+    text-align: center
+    margin-top: 2vh
+    margin-bottom: 1vh
+    color: #ffffff
+    font-size: 3rem
+
+a
+  @include mixins.linha-horizontal
+  @include mixins.linha-horizontal-hover
+
+#firstSection
+  background-color: #FFFFFF
+  box-shadow: 4px 4px 100px 4px rgba(0, 0, 0, 0.521)
+  border-radius: 30px
+  width: 96vw
+  margin: auto
+  padding-bottom: 10vh
+  // height: 50vh
+
+#firstHeader
+  display: flex
+  justify-content: space-between
+  width: 95vw
+  height: 20vh
+
+  img
+    width: 10vw
+    height: 20vh
+    padding-top: 2vh
+    padding-left: 2vw
+    @include mixins.mobile
+      width: 31vw
+      height: 20vh
+      position: relative
+      right: 10px
+
+  nav
+    display: flex
+    gap: 2vw
+    align-items: center
+    @include mixins.mobile
+      flex-direction: column
+      margin-top: 25px
+      gap: 0px 15px
+    a
+      @include mixins.mobile
+      font-size: 25px
+
+#tituloeRedes
+  margin-top: 10vh
+  display: flex
+  justify-content: space-around
+  align-items: center
+
+  img
+    border-radius: 50%
+    width: 21vw
+    height: 41vh
+    @include mixins.mobile
+      width: 31vw
+      height: 31vh
+      position: relative
+      right: 10px
+
+  #navRedes
+    display: flex
+    height: 11vh
+    margin-top: 2vh
+
+    p
+      font-size: 2vw
+      font-weight: bold
+      color: transparent
+      background: linear-gradient(252.34deg, rgba(241, 184, 210, 0.74) -4.03%, rgba(149, 187, 233, 0.79) 112.41%)
+      background-clip: text
+      -webkit-background-clip: text
+
+  #botoes
+    display: flex
+    text-align: center
+    @include mixins.mobile
+      p
+        margin-left: 0px
+        text-align: center
+        &:first-child
+          font-size: 6vw
+          padding: 0px
+        &:last-child
+          font-size: 6vw
+          padding: 0px
+
+    p
+      font-size: 4vh
+      margin-left: 1vw
+      text-align: center
+      height: 100%
+
+      &:first-child
+        padding: 15px
+        background-color: #FFFFFF
+        color: #F1B8D2
+        box-shadow: 4px 4px 40px 4px rgba(168, 168, 168, 0.25)
+        border-radius: 10px
+        border: 2px solid #F1B8D2
+      &:last-child
+        padding: 15px
+        color: #FFFFFF
+        background: linear-gradient(252.34deg, #F1B8D2 -4.03%, #95BBE9 112.41%)
+        box-shadow: 4px 4px 40px 4px rgba(168, 168, 168, 0.25)
+        border-radius: 10px
+#divSobre
+  background-color: #353131
+  display: flex
+  align-items: center
+  justify-content: center
+  height: 50vh
+  h1
+    color: #fff
+
+#techs
+  display: flex
+  gap: 2vw
+  margin-top: 2vh
+  justify-content: center
+  align-items: center
+  background-color: #353131
+  padding: 5vw
+  width: 96vw
+  margin: auto
+  border-radius: 30px
+  img
+    width: 14vw
+    height: 25vh
+    background: linear-gradient(252.34deg, #F1B8D2 -4.03%, #95BBE9 112.41%)
+    box-shadow: 4px 4px 40px 4px rgba(168, 168, 168, 0.25)
+    border-radius: 10px
+    border-radius: 25px
+    padding: 25px
+    border: 5px outset #F1B8D2
+    text-align: center
+    transition: 600ms
+    box-shadow: inset 0 0 0 0 rgba(224, 18, 207, 0.322)
+
+    &:hover
+      box-shadow: inset 290px 0 0 0 rgba(0, 0, 0, 0.671)
+      border: outset 5px #afa2a8
+      color: rgb(255, 253, 255)
+
+#projetosFotos
+  display: flex
+  flex-wrap: wrap
+  background-color: #353131
+  border-radius: 30px
+  width: 96vw
+  margin: auto
+  margin-top: 2vh
+  padding: 2vh
+  justify-content: center
+  gap: 9px
+  a
+    text-decoration: none
+    color: #c70c63
+    font-size: 21px
+    position: relative
+    transition: ease-in-out 600ms
+    &:hover
+      color: #F1B8D2
+      font-size: 25px
+
+    &::after
+      content: ""
+      position: absolute
+      width: 0%
+      height: 5px
+      top: 25px
+      right: 0px
+      background-color: #c70c63
+      transition: ease-in-out 300ms
+  &:hover::after
+    width: 100%
+  @include mixins.mobile
+    gap: 40px
+
+  section
+    display: flex
+    flex-direction: column
+    align-items: center
+    text-align: center
+    h1
+      color: #ffffff
+      font-size: 2rem
+    p
+      max-width: 29vw
+      font-size: 1rem
+      text-align: center
+      color: #e7bdd0
+      @include mixins.mobile
+        max-width: 80vw
+        font-size: 30px
+
+    #cronometro
+      width: 29vw
+      height: 29vh
+      border-radius: 5%
+      @include mixins.bg-img("../img/cron.png")
+      @include mixins.mobile
+        filter: grayscale(0%)
+        width: 96vw
+        border-radius: 5%
+        background-size: 100%
+
+    #landingpage
+      width: 29vw
+      height: 29vh
+      border-radius: 5%
+      @include mixins.bg-img("../img/over1.png")
+      @include mixins.mobile
+        filter: grayscale(0%)
+        width: 96vw
+        border-radius: 5%
+        background-size: 100%
+    #tabuada
+      width: 29vw
+      height: 29vh
+      border-radius: 5%
+      @include mixins.bg-img("../img/tabuada.png")
+      @include mixins.mobile
+        filter: grayscale(0%)
+        width: 96vw
+        border-radius: 5%
+        background-size: 100%
+    #slideshow
+      width: 29vw
+      height: 29vh
+      border-radius: 5%
+      @include mixins.bg-img("../img/slideshow.png")
+      @include mixins.mobile
+        filter: grayscale(0%)
+        width: 96vw
+        border-radius: 5%
+        background-size: 100%
+
+footer
+  width: 96vw
+  margin: auto
+  text-align: center
+  margin-top: 3vh
+  background-color: #ffffff
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-direction: column
+  margin-bottom: 25px
+  border-radius: 30px
+  padding-bottom: 2vh
+  @include mixins.mobile
+    width: 100vw
+    margin-top: 3vh
+    background-color: #ffffff
+    border-radius: 0px
+    margin-bottom: 25px
+
+  #sectionDoFooter
+    display: flex
+    padding-top: 5vh
+    gap: 0px 55px
+
+    a
+      font-size: 5vw
+
+      &:hover
+        transform: rotate(360deg)
+        color: #c70c63
+        font-size: 5vw
+
+      &::after
+        background-color: #c70c6300
+        transition: ease-in-out 600ms
+
+    @include mixins.mobile
+      a
+        p
+          font-size: 50px
+
+      &:hover
+        transform: rotate(360deg)
+        color: #c70c63
+        font-size: 5vw
+
+      &::after
+        background-color: #c70c6300
+        transition: ease-in-out 600ms
+
+  #msgRodape
+    margin-top: 8vh
+    color: red
+    font-size: 1vw
+    color: #F1B8D2
+    a
+      font-size: 1vw
+      color: black
+      &::after
+        background-color: #c70c6300
+      @include mixins.mobile
+        font-size: 8vw
+
+    @include mixins.mobile
+      font-size: 8vw
+
+/*Animações*/
+[data-anima]
+  opacity: 0
+  transition: 1s
+
+[data-anima="esquerda"]
+  transform: translate3d(500px, 0, 0)
+
+[data-anima="direita"]
+  transform: translate3d(0, 100px, 0)
+
+[data-anima].animacao
+  opacity: 1
+  transform: translate3d(0, 0, 0)
